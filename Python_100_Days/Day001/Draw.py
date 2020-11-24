@@ -29,7 +29,6 @@ def draw_rectangle(x, y, width, height):
     turtle.end_fill()
 
 
-
 if __name__ == '__main__':
     draw()
 
