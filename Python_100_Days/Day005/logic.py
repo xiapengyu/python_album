@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 for n in range(100, 1000):
     low = n % 10
     mid = n // 10 % 10

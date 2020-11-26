@@ -34,6 +34,8 @@ def main():
     while True:
         client, addr = server.accept()
         print(str(addr) + '连接到了服务器.')
+        # print('server recv %s' % server.recv(1024))
+        # print('client recv %s' % client.recv(1024))
         # 启动一个线程来处理客户端的请求
         DataHandler(client, data).start()
 

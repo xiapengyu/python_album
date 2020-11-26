@@ -8,6 +8,7 @@ def main():
     client.connect(('127.0.0.1', 6789))
     # 定义一个保存二进制数据的对象
     in_data = bytes()
+    # client.send(bytes('hello world', 'utf-8'))
     # 由于不知道服务器发送的数据有多大每次接收1024字节
     data = client.recv(1024)
     while data:
