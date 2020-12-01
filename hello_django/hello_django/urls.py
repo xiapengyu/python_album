@@ -23,5 +23,8 @@ urlpatterns = [
     path('hello/', show_index),
     path('fruit/', show_fruit),
     path('fruit2/', show_fruit_2),
-    path('polls/add/', add_user)
+    path('polls/add/', add_user),
+    path('polls/login/', login),
+    path('polls/excel/', export_user),
+    path('polls/query/', query_user),
 ]
