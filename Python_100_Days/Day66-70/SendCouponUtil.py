@@ -3,6 +3,11 @@
 """
 import random
 import time
+import logging
+import datetime
+
+# 控制台日志打印信息
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - [line:%(lineno)d] - %(levelname)s: %(message)s')
 
 # 需要赠送代金券的用户信息手机号和unionId
 user_info = {
@@ -25,6 +30,7 @@ def send_type_1(num):
         union_id = user_info[key]
         for index in range(0, num):
             s = create_sql(phone, union_id, sql)
+            # logging.info(s)
             print(s)
 
 
@@ -43,6 +49,7 @@ def send_type_2(num):
         union_id = user_info[key]
         for index in range(0, num):
             s = create_sql(phone, union_id, sql)
+            # logging.info(s)
             print(s)
 
 
@@ -61,6 +68,7 @@ def send_type_3(num):
         union_id = user_info[key]
         for index in range(0, num):
             s = create_sql(phone, union_id, sql)
+            # logging.info(s)
             print(s)
 
 
@@ -98,6 +106,7 @@ def create_coupon():
 
 
 def main():
+    logging.info('开始赠送代金券')
     send_type_1(1)
     send_type_2(1)
     send_type_3(1)
